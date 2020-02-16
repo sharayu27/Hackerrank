@@ -14,4 +14,22 @@
  */
 
 public class linkedlist1 {
+    public boolean hasCycle(ListNode head){
+        if(head == null || head.next == null)
+            return false;
+
+        ListNode first = head;
+        ListNode second = head.next;
+        while(second!=null && second.next!=null && second!= first)
+        {
+            first = first.next;
+            second = second.next;
+        }
+        return second == first;
+    }
+    public static void main(){
+        boolean result;
+
+
+    }
 }
